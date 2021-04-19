@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: rgb(84, 85, 85);
+  margin: 0;
+}
+
+header {
+  display: block;
+  text-align: center;
+  padding: 5%;
+}
+
+header h1 {
+  color: rgb(87, 102, 241);
+  text-transform: uppercase;
+}
+
+header h3 {
+  color: rgb(129, 129, 129);
+  font-weight: lighter;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 25em;
+  height: 100%;
+  margin: auto;
+  margin-top: 3em;
+}
+
+.form-group {
+  display: grid;
+  margin-top: 1em;
+}
+
+ul.controls {
+  list-style: none;
+  margin-left: -2em;
+}
+
+label {
+  line-height: 1;
+  margin-bottom: 0.3em;
+}
+
+fieldset {
+  border: 1px solid rgba(71, 71, 71, 0.2);
+  border-radius: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group fieldset,
+.form-group select {
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: "Poppins", sans-serif;
+  color: rgb(129, 129, 129);
+  border: 1px solid rgba(71, 71, 71, 0.2);
+  background: rgb(252, 252, 252);
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+fieldset:focus {
+  border-color: rgb(87, 102, 241);
+}
+
+span.hint,
+textarea {
+  color: rgb(129, 129, 129);
+  line-height: 1.5;
+  margin-bottom: 5px;
+  transition: 0.2s;
+  font-size: smaller;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-group:focus-within span {
+  color: rgb(87, 102, 241);
+}
+
+.input-group {
+  display: inline-grid;
+  justify-self: start;
+}
+
+.input-group > * {
+  grid-row: 1;
+}
+
+.input-group span {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(87, 102, 241);
+  background: rgb(87, 102, 241);
+  padding: 10px 20px;
+  margin-bottom: 0;
+  margin-left: -5px;
+  border-radius: 0 5px 5px 0;
+  z-index: 0;
+}
+
+.input-group input:focus + span {
+  background: rgb(87, 102, 241);
+  color: rgb(255, 255, 255);
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: rgb(255, 142, 142);
+  font-size: smaller;
+}
+
+.red {
+  background: rgb(187, 91, 144);
+  color: rgb(255, 255, 255);
+}
+
+button {
+  border: 1px solid rgb(87, 102, 241);
+  background: rgb(87, 102, 241);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+.games {
+  max-width: 25em;
+  height: 100%;
+}
+
+.meta {
+  display: block;
+  margin: 0;
+  margin-left: 1em;
+  width: 20em;
+  height: 100%;
+}
+
+.game {
+  border-radius: 5px;
+  border: 1px solid rgba(71, 71, 71, 0.2);
+  background-color: white;
+  margin-bottom: 1em;
+}
+
+.game header {
+  border-bottom: 1px solid rgba(71, 71, 71, 0.2);
+  border-radius: 5px 5px 0 0;
+  background-color: rgb(87, 102, 241);
+  color:rgb(255, 255, 255);
+}
+
+.game p {
+  color: rgb(129, 129, 129);
+  font-size: smaller;
+}
+
+.delete {
+  margin-left: 1em;
+  margin-bottom: 2em;
+}
+
+footer {
+  display: block;
+  height: 100px;
+  width: 100vw;
+  text-align: center;
+  padding: 3%;
+  background-color: rgb(87, 102, 241);
+  color: rgb(255, 255, 255);
+  margin-top: 3em;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Games: Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Video Games</h1>
+      <h3>Submit your favourite game!</h3>
+    </header>
+    <main>
+      <section>
+        <form>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <span class="hint">Add a game title</span>
+            <input type="text" id="title" name="title" minlength="3" maxlength="20" inputmode="text" placeholder="e.g. Super Mario" required />
+            <span class="error hidden">Title is required</span>
+          </div>
+
+          <div class="form-group">
+            <label for="age_limit">Age limit</label>
+            <span class="hint">Enter an age limit</span>
+            <input type="text" id="age_limit" name="age_limit" inputmode="numeric" required />
+            <span class="error hidden">Age limit is required</span>
+          </div>
+
+          <div class="form-group">
+            <label for="release_date">Release Date</label>
+            <span class="hint">Add release date</span>
+            <input type="date" id="release_date" class="today" name="release_date" min="1947-01-01" required />
+            <span class="error hidden">Release date is required</span>
+          </div>
+
+          <div class="form-group">
+            <label for="genre">Genre</label>
+            <span class="hint">Add a genre of the game</span>
+            <input type="text" id="genre" name="genre" inputmode="text" placeholder="e.g. Platform" />
+          </div>
+
+          <fieldset>
+            <legend>Platforms</legend>
+            <span class="hint">Select platforms the game is available on</span>
+            <ul role="list" class="controls">
+              <li>
+                <label for="playstation">
+                  <input id="playstation" type="checkbox" name="platforms" value="playstation" />
+                  PlayStation
+                </label>
+              </li>
+              <li>
+                <label for="xbox">
+                  <input id="xbox" type="checkbox" name="platforms" value="xbox" />
+                  Xbox
+                </label>
+              </li>
+              <li>
+                <label for="nintendo">
+                  <input id="nintendo" type="checkbox" name="platforms" value="nintendo" />
+                  Nintendo
+                </label>
+              </li>
+              <li>
+                <label for="windows">
+                  <input id="windows" type="checkbox" name="platform" value="windows" />
+                  Windows
+                </label>
+              </li>
+              <li>
+                <label for="mac">
+                  <input id="mac" type="checkbox" name="platform" value="mac" />
+                  MacOS
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Players</legend>
+            <span class="hint">Is the game singleplayer or multiplayer?</span>
+            <ul role="list" class="controls">
+              <li>
+                <label for="singleplayer">
+                  <input id="singleplayer" type="radio" name="players" value="singleplayer" />
+                  Singleplayer
+                </label>
+              </li>
+              <li>
+                <label for="multiplayer">
+                  <input id="multiplayer" type="radio" name="players" value="multiplayer" />
+                  Multiplayer
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="price">Price</label>
+            <span class="hint">Add price</span>
+            <div class="input-group">
+              <input type="text" inputmode="decimal" id="price" name="price" pattern="\d+(\.\d{2})?" />
+              <span>DKK</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="metascore">Metascore</label>
+            <span class="hint">Add a metascore</span>
+            <div class="input-group">
+              <input type="number" step="1" min="0" max="100" id="metascore" name="metascore" inputmode="numeric" />
+              <span>%</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="developer">Developer</label>
+            <span class="hint">You can add multiple developers</span>
+            <input type="text" id="developer" name="developer" placeholder="e.g. Nintendo" multiple />
+          </div>
+          <button type="submit">ADD GAME</button>
+        </form>
+      </section>
+      <section>
+        <div class="games"></div>
+      </section>
+    </main>
+
+    <template>
+      <article class="game">
+        <header>
+          <h2></h2>
+        </header>
+        <section class="meta">
+          <p><span>Age Limit:</span> <span class="age_limit"><span></span>+</span></p>
+          <p><span>Released:</span> <span class="release_date"></span></p>
+          <p><span>Genre:</span> <span class="genre"></span></p>
+          <p><span>Platforms:</span> <span class="platforms"></span></p>
+          <p><span>Multiplayer:</span> <span class="players"></span></p>
+          <p><span>Price:</span> <span class="price"></span>DKK</p>
+          <p><span>Metascore:</span> <span class="metascore"><span></span>%</span></p>
+          <p><span>Developer:</span> <span class="developer"></span></p>
+        </section>
+      </article>
+    </template>
+
+    <footer>
+      <p>Games | 2021</p>
+    </footer>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
